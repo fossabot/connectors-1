@@ -111,6 +111,13 @@ public class HttpCommonRequest {
       description = "Store the response as a document in the document store")
   private boolean storeResponse;
 
+  @TemplateProperty(
+      type = TemplateProperty.PropertyType.Hidden,
+      feel = Property.FeelMode.disabled,
+      group = "endpoint",
+      optional = true)
+  private String skipEncoding;
+
   public Object getBody() {
     return body;
   }
@@ -137,6 +144,14 @@ public class HttpCommonRequest {
 
   public void setQueryParameters(Map<String, String> queryParameters) {
     this.queryParameters = queryParameters;
+  }
+
+  public boolean getSkipEncoding() {
+    return Objects.equals(skipEncoding, "true");
+  }
+
+  public void setSkipEncoding(final String skipEncoding) {
+    this.skipEncoding = skipEncoding;
   }
 
   public boolean hasAuthentication() {

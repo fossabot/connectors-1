@@ -33,6 +33,7 @@ import io.camunda.connector.http.rest.model.HttpJsonRequest;
       "authentication",
       "headers",
       "queryParameters",
+      "skipEncoding",
       "connectionTimeoutInSeconds",
       "readTimeoutInSeconds",
       "writeTimeoutInSeconds",
