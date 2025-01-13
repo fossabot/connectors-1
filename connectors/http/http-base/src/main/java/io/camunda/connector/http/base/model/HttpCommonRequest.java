@@ -112,6 +112,8 @@ public class HttpCommonRequest {
   private boolean storeResponse;
 
   @TemplateProperty(
+      label = "Skip encoding",
+      description = "Skip the default decoding and encoding behavior",
       type = TemplateProperty.PropertyType.Hidden,
       feel = Property.FeelMode.disabled,
       group = "endpoint",
